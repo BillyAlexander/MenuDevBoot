@@ -1,0 +1,18 @@
+@extends('layouts.layoutunauth')
+
+@section('menudinamico')
+	{{Menus::render('top')}}
+
+@stop
+
+@section('content')
+<h1>Bienvenido {{Auth::user()->get()->UserName}}</h1>
+
+
+
+<a href="{{URL::route('salir')}}" class="dropdown-toggle">
+						
+						<span class="hidden-xs">Salir</span>
+					</a>
+
+@stop
